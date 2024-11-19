@@ -85,22 +85,15 @@ namespace _19noemberi
         
         public Car GetTesla()
         {
-            Car bestCondition = Cars[0];
             foreach(Car car in Cars)
             {
                 if (car.Model == "Tesla")
                 {
-                    bestCondition = car;
+                    car.ShowInfo();
+                    return car;
                 }
             }
-            if(bestCondition.Model == "Tesla")
-            {
-                return bestCondition;
-            }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
     }
